@@ -2,20 +2,20 @@ ALGORITHM Sentence
 VAR
     sent:STRING
 
-Nword:INTEGER:=0;
+Nword:INTEGER:=1;
 Nvoyelle: INTEGER:=0;
 sentLong: INTEGER;
 BEGIN
   while(sent[length-1]='.') DO
 
 
-FOR i FROM  1 TO sent.length-1 STEP step DO
+FOR i FROM  0 TO sent.length-1 STEP step DO
 IF (sent[i]=' ')
 Nword:= Nword+1;
 END_IF
 END_FOR
 
-FOR i FROM 1 TO sent.length STEP step DO
+FOR i FROM 0 TO sent.length STEP step DO
 IF(sent[i].lower()='a' OR 'e' OR 'i' OR 'o' OR 'u' OR 'y')
 Nvoyelle:=Nvoyelle+1;
 END_IF
